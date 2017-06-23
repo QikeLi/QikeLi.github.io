@@ -4,7 +4,7 @@
  <title>Qike Li</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-06-21T00:43:00-07:00</updated>
+ <updated>2017-06-23T02:46:44-07:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Qike</name>
@@ -21,13 +21,15 @@
 &lt;p&gt;
 &amp;#x2014;
 layout: default
-title: &quot;Org-mode -&amp;gt; Jekyll -&amp;gt; GitHub Blog Workflow&quot;
+title: &quot;My first blog post&quot;
 date: 2017-06-12
-excerpt: This post describes my blogging workflow&amp;#x2026;
+excerpt: Testing the workfolw&amp;#x2026;
 &amp;#x2014;
 &lt;/p&gt;
 
 &lt;/div&gt;
+
+
 
 &lt;p&gt;
 test
