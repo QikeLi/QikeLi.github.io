@@ -1,0 +1,266 @@
+% * Preambles
+\documentclass[paper=letter,fontsize=11pt]{scrartcl} % KOMA-article class
+							
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+	%\textheight=700px                    % Saving trees ;-)
+%\usepackage{url}
+\usepackage[colorlinks=true,
+linkcolor=blue,
+urlcolor=blue]{hyperref}
+\usepackage{float}
+\usepackage{etaremune}
+\usepackage{wrapfig}
+
+\usepackage{attachfile}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%\addtolength{\voffset}{-40pt}
+%\addtolength{\textheight}{20pt}
+
+\setlength\topmargin{0pt}
+\addtolength\topmargin{-\headheight}
+\addtolength\topmargin{-\headsep}
+\setlength\oddsidemargin{0pt}
+\setlength\textwidth{\paperwidth}
+\addtolength\textwidth{-2in}
+\setlength\textheight{\paperheight}
+%\addtolength\textheight{-3in}
+\addtolength\textheight{-2in}
+\usepackage{layout}
+
+%%% Custom sectioning}{sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{ % Slogan}{optional)
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[2]{\section*{\uppercase{#1} #2}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name}{birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}			   % Entry name}{birth, address, etc.)
+              \hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\ResearchEntry}[2]{      % Same as \PersonalEntry
+		\noindent \textbf{#1} \par      % Research area
+		\noindent \textit{#2} \par}        % Specific fields
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{White}{%
+			\parbox{6em}{%
+			\hfill\color{Black}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\colorbox{White}{
+			\parbox{6em}{%
+			\hfill\color{Black}#2}} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\PaperEntry}[7]{
+		\noindent #1, ``\href{#7}{#2}", \textit{#3} \textbf{#4}, #5 (#6).}
+
+\newcommand{\SubmittedEntry}[6]{
+  \noindent #1, ``\href{#5}{#2}", \textit{#3} (#4)(\textit{#5}).}
+
+\newcommand{\InPreparationEntry}[3]{
+		\noindent #1, ``\href{#3}{#2}".}
+
+\newcommand{\ArxivEntry}[3]{
+		\noindent #1, ``\href{http://arxiv.org/abs/#3}{#2}", \textit{{cond-mat/}#3}.}
+        
+\newcommand{\BookEntry}[4]{
+		\noindent #1, ``\href{#3}{#4}", \textit{#3}.}
+        
+\newcommand{\FundingEntry}[5]{
+        \noindent #1, ``#2", \$#3 (#4, #5).}
+
+\newcommand{\TalkEntry}[4]{
+		\noindent ``\href{#4}{#1}", #2, #3}
+
+\newcommand{\ThesisEntry}[5]{
+		\noindent #1 -- #2 #3 ``#4" \textit{#5}}
+
+\newcommand{\CourseEntry}[3]{
+		\noindent \item{#1: \textbf{#2} \\ #3}}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+
+%\layout
+
+% you can upload a photo and include it here...
+% \begin{wrapfigure}{l}{0.5\textwidth}
+% 	\vspace*{-2em}
+% 		\includegraphics[width=0.2\textwidth]{Appelbaum.JPG}
+% \end{wrapfigure}
+
+% * Personal details
+%%% ------------------------------------------------------------
+\MyName{Qike Li}
+
+%\sepspace
+\NewPart{}{}
+\PersonalEntry{Address} {617 N. Santa Rita Avenue, Mathematics East 149, Tucson, AZ 85721}
+\PersonalEntry{Email} {\href{mailto:qikeli@gmail.com}{qikeli@gmail.com}}
+\PersonalEntry{Phone} {520-647-6973}
+\PersonalEntry{Github}{\href{https://github.com/QikeLi}{github.com/QikeLi}}
+\PersonalEntry{Website}{\href{https://qikeli.github.io/}{qikeli.github.io}}
+
+% \NewPart{}{}
+
+% \PersonalEntry{Address}{\href{http://maps.google.com/maps/ms?ie=UTF&msa=0&msid=205373386241137011999.000494c753d05031c4fe4}{Physical Sciences Complex}, University of Maryland, College Park}
+% \PersonalEntry{Phone}{(301) 337-7461}
+% \PersonalEntry{Mail}{\href{mailto:appelbaum@physics.umd.edu}{appelbaum@physics.umd.edu}}
+% \PersonalEntry{WWW}{\href{http://appelbaumlab.umd.edu/CV.html}{http://appelbaum.physics.umd.edu}}
+
+% * Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+
+\EducationEntry{PhD Candidate in Statistics–Statistical Informatics track}{2012-present}{University of Arizona, Tucson, AZ}{\href{http://stat.arizona.edu/}{Statistics Graduate Interdisciplinary Program (GIDP)}\\
+  Minor in Biostatistics\\
+  Advisors: Yves A. Lussier (Bioinformatics) \& Hao Helen Zhang (Statistics)\\
+  Expected graduation date: August 2017}
+\sepspace
+
+\EducationEntry{MS Molecular Biology}{2006-2009}{Guizhou Univeristy, Guiyang, China}
+\sepspace
+
+\EducationEntry{BS Biotechnology}{2001-2005}{Zhengzhou Univeristy, Zhengzhou, China}
+
+
+% * Research Areas
+%%% ------------------------------------------------------------
+\NewPart{Research Areas}{}
+\ResearchEntry{Statistical}{Single-subject inference, count data, multivariate statistics, computing, machine learning, high dimensional data, small-sample, paired-sample statistics, big data, data visualization, high-throughput data}
+
+\sepspace
+\ResearchEntry{Interdisciplinary}{Biomedical informatics, bioinformatics, precision medicine, clinical translation, N-of-1, gene expression, gene set analysis, single-cell RNA-seq, cancer, systems biology, big clinical data}
+
+% * Work experience
+%%% ------------------------------------------------------------
+\NewPart{Appointment}{}
+\WorkEntry{Research Assistant}{2014-current}{\href{http://www.lussiergroup.org/}{Lussier Group, Center for Biomedical Informatics \& Biostatistics}, University of Arizona}{Developing statistical informatics methodology for precision medicine. Engaging in interdisciplinary research: working with an expert team of statisticians, physicians, engineers, biologists, geneticists, and computer scientists. Responsibilities include original research, statistical support, grant writing, and software engineering.}
+\newpage
+\WorkEntry{Research Assistant}{2013-2014}{Fionna McCarthy Group, University of Arizona}{Developed statistical informatics methods for the analysis of high throughput sequencing data.}
+
+\WorkEntry{Research Technician}{2010-2012}{Rick Michod Group,  University of Arizona}{Studied the evolution of multicellularity using bioinformatics, comparative genomics, phylogenetic analysis and molecular biology.}
+
+% * Papers
+%%% ------------------------------------------------------------
+
+\NewPart{Publications}{\href{https://scholar.google.com/citations?user=aB0lJKkAAAAJ&hl=en}{[statistics]}}
+
+\begin{etaremune}
+\item \PaperEntry{\underline{Li, Qike}, A. Grant Schissler, Vincent Gardeux, Ikbel Achour, Colleen Kenost, Joanne Berghout, Haiquan Li, Hao Helen Zhang, and Yves A. Lussier}{N-of-1-pathways MixEnrich: advancing precision medicine via single-subject analysis in discovering dynamic changes of transcriptomes}{BMC medical genomics}{10}{1}{2017}{https://bmcmedgenomics.biomedcentral.com/articles/10.1186/s12920-017-0263-4}  
+\item \PaperEntry{\underline{Li, Qike}, A. Grant Schissler, Vincent Gardeux, Joanne Berghout, Ikbel Achour, Colleen Kenost, Haiquan Li, Hao Helen Zhang, and Yves A. Lussier}{kMEn: Analyzing noisy and bidirectional transcriptional pathway responses in single subjects}{Journal of biomedical informatics}{66}{}{2017}{http://www.sciencedirect.com/science/article/pii/S1532046416301836}
+\item \PaperEntry{Schissler, A. Grant*, \underline{Qike Li}*, James L. Chen, Colleen Kenost, Ikbel Achour, D. Dean Billheimer, Haiquan Li, Walter W. Piegorsch, and Yves A. Lussier}{Analysis of aggregated cell–cell statistical distances within pathways unveils therapeutic-resistance mechanisms in circulating tumor cells}{Bioinformatics}{32}{12} {2016}{https://academic.oup.com/bioinformatics/article/32/12/i80/2288654/Analysis-of-aggregated-cell-cell-statistical} (* joint first authorship)
+\item \PaperEntry{Schissler, A. Grant*, Vincent Gardeux*, \underline{Qike Li}*, Ikbel Achour, Haiquan Li, Walter W. Piegorsch, and Yves A. Lussier}{Dynamic changes of RNA-sequencing expression for precision medicine: N-of-1-pathways Mahalanobis distance within pathways of single subjects predicts breast cancer survival}{Bioinformatics}{31}{12}{2015} {https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btv253} (* joint first authorship)
+\item \PaperEntry{Pookhao, Naruekamol, Michael B. Sohn, \underline{Qike Li}, Isaac Jenkins, Ruofei Du, Hongmei Jiang, and Lingling An}{A two-stage statistical procedure for feature selection and comparison in functional analysis of metagenomes}{Bioinformatics}{31}{2}{2015}{https://doi.org/10.1093/bioinformatics/btu635}
+\item \PaperEntry{Li, Haiquan, Nima Pouladi, Ikbel Achour, Vincent Gardeux, Jianrong Li, \underline{Qike Li}, Hao Helen Zhang, Fernando D. Martinez, Joe G N Skip Garcia, Yves A. Lussier}{eQTL networks unveil enriched mRNA master integrators downstream of complex disease-associated SNPs}{Journal of Biomedical Informatics}{58}{ }{2015}{https://doi.org/10.1016/j.jbi.2015.10.010}
+\item \PaperEntry{Lussier, Yves a, Haiquan Li, Nima Pouladi, and \underline{Qike Li}}{Accelerating precision biology and medicine with computational biology and bioinformatics}{Genome Biology}{15}{9}{2014}{https://doi.org/10.1186/s13059-014-0450-y}
+\item \PaperEntry{Sohn, Michael B, Lingling An, Naruekamol Pookhao, and \underline{Qike Li}}{Accurate genome relative abundance estimation for closely related species in a metagenomic sample}{BMC Bioinformatics}{15}{1}{2014}{https://doi.org/10.1186/1471-2105-15-242}
+  
+\end{etaremune}
+% * Papers Under Review
+\NewPart{Papers Under Review}{}
+\begin{etaremune}
+\item \SubmittedEntry{Gardeux, Vincent, Joanne Berghout, Ikbel Achour, A. Grant Schissler, \underline{Qike Li}, Colleen Kenost, Jianrong Li, Yuan Shang, Anthony Bosco, Saner Don, Marilyn J. Halonen, Daniel J. Jackson, Haiquan Li, Fernando D. Martinez, Yves A. Lussier}{A genome-by-environment interaction classifier for precision medicine: personal transcriptome response to rhinovirus identifies children prone to asthma exacerbations}{Journal of the American Medical Informatics Association}{2017}{in press}{https://doi.org/10.1186/1471-2105-15-242}
+\end{etaremune}
+
+\NewPart{Papers in preparation}{}
+\begin{etaremune}
+\item \InPreparationEntry{\underline{Qike Li}, Hao Helen Zhang, Yves A. Lussier}{iDEG: a single-subject method for assessing gene differential expression from two transcriptomes of an individual}{}
+\end{etaremune}
+%\NewPart{Pending manuscripts}{\href{http://arxiv.org/find/cond-mat/1/au:+Appelbaum_I/0/1/0/all/0/1}{[arxiv]}}
+%\begin{itemize}
+%\item \ArxivEntry{J. Li and \underline{I. Appelbaum}}{D$^-$ donor spin coupling to conduction electrons in silicon}{1308.5621}
+%\end{itemize}
+
+
+% * Talks
+\NewPart{Talks}{}
+\begin{etaremune}
+\item\TalkEntry{Joint Statistical Meetings (JSM)}{Baltimore, USA}{7/302017}{}
+\item\TalkEntry{WNAR Annual Meeting}{Santa Fe, USA}{6/27/2017}{https://qikeli.github.io/WNAR-2017-presentation/}
+\item\TalkEntry{The 6th Annual Translational Bioinformatics Conference}{Jeju, Korea}{10/16/2016}{}
+\item\TalkEntry{Short Course: Computational methods for precision medicine and single subject studies with genomes and transcriptomes}{Jeju, Korea}{10/16/2016}{}
+\end{etaremune}
+
+% * Posters
+\NewPart{Poster sessions and showcases}{}
+\begin{etaremune}
+\item University of Arizona Student Showcase, N-of-1-pathways for precision medicine, 2/22/2017
+\item GIDP Student Research Showcase, N-of-1-pathways for precision medicine, 12/10/2015
+\end{etaremune}
+% * Synergistic Activities
+\NewPart{Synergistic Activities}{}
+\begin{itemize}
+\item University of Arizona Graduate \& Professional Student Council Travel Grant Judge (2017)
+\item Contributed to the University of Arizona Health Sciences’ participation in the \href{https://allofus.nih.gov/}{National Precision Medicine Initiative\textregistered} (Feb 2016)
+\item Referee: the Journal of Biomedical Informatics (2016)
+\item Member: American Statistical Association (ASA), International Society for Computational Biology (ISCB)
+\end{itemize}
+
+% * Awards
+\NewPart{Awards}{}
+\begin{itemize}
+\item \href{https://gidp.arizona.edu/qike-lis-abstracts}{Fall 2016 HE Carter Travel Award}, Graduate Interdisciplinary Programs, University of Arizona
+\item Summer 2017 HE Carter Travel Award, Graduate Interdisciplinary Programs, University of Arizona
+\end{itemize}
+
+% * Technical skills
+\NewPart{Technical skills}{}
+R (\textit{advanced}), UNIX and BASH (\textit{intermediate}), LaTeX (\textit{intermediate}), Python (\textit{basic}), HTML and CSS (\textit{basic}), Adobe Illustrator, Emacs and Elisp, Cluster computing   
+% * Teaching 
+\NewPart{Teaching}{}
+\begin{itemize}
+\item Spring 2016,  \textbf{MATH 363: Introduction to Statistical Methods}\\  
+  \textit{Teaching Asisstant}
+
+  \item Spring 2016 \textbf{MCB 516A/416A: Statistical Bioinformatics and Genomic Analysis}\\
+    \textit{Guest Lecturer}
+\item Fall 2013 \textbf{ABE 613: Applied Biostatistics} \\
+        \textit{Guest Lecturer}
+\end{itemize}
+
+\end{document}
