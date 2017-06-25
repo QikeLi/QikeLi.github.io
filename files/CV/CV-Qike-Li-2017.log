@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  23 JUN 2017 13:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  23 JUN 2017 18:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -689,11 +689,11 @@ Package rerunfilecheck Info: File `CV-Qike-Li-2017.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 266.
  ) 
 Here is how much of TeX's memory you used:
- 11692 strings out of 493089
- 180793 string characters out of 6134842
+ 11694 strings out of 493089
+ 180809 string characters out of 6134842
  398955 words of memory out of 5000000
  14934 multiletter control sequences out of 15000+600000
- 15196 words of font info for 62 fonts, out of 8000000 for 9000
+ 15304 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,6n,54p,608b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -703,7 +703,7 @@ ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
 015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on CV-Qike-Li-2017.pdf (4 pages, 94875 bytes).
+Output written on CV-Qike-Li-2017.pdf (4 pages, 94883 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
