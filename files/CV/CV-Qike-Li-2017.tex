@@ -41,8 +41,9 @@ urlcolor=blue]{hyperref}
 \usepackage{sectsty}
 
 \sectionfont{%			            % Change font of \section command
-	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
-	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+  \usefont{OT1}{phv}{b}{n}		% bch-b-n: CharterBT-Bold font
+      \sectionrule{0pt}{0pt}{-6pt}{.7pt}} % use thinner horizontal rules
+      
 
 %%% Macros
 %%% ------------------------------------------------------------
@@ -51,11 +52,11 @@ urlcolor=blue]{hyperref}
 \newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
 
 \newcommand{\MyName}[1]{ % Name
-		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+		\Huge \usefont{OT1}{phv}{b}{n}  #1
 		\par \normalsize \normalfont}
 		
 \newcommand{\MySlogan}[1]{ % Slogan}{optional)
-		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\footnotesize \usefont{OT1}{phv}{m}{n} \vspace{3mm}#1 %QL: down-size the font of adress, email, webpage etc. Add extra space between my name and the following lines.
 		\par \normalsize \normalfont}
 
 \newcommand{\NewPart}[2]{\section*{\uppercase{#1} #2}}
@@ -135,15 +136,10 @@ urlcolor=blue]{hyperref}
 
 % * Personal details
 %%% ------------------------------------------------------------
-\MyName{Qike Li}
+\MyName{\noindent Qike Li}
 
-%\sepspace
-\NewPart{}{}
-\PersonalEntry{Address} {617 N. Santa Rita Avenue, Mathematics East 149, Tucson, AZ 85721}
-\PersonalEntry{Email} {\href{mailto:qikeli@gmail.com}{qikeli@gmail.com}}
-\PersonalEntry{Phone} {520-647-6973}
-\PersonalEntry{Github}{\href{https://github.com/QikeLi}{github.com/QikeLi}}
-\PersonalEntry{Website}{\href{https://qikeli.github.io/}{qikeli.github.io}}
+ \MySlogan{\noindent\href{https://www.google.com/maps/place/Thomas+W.+Keating+Bioresearch+Building/@32.237991,-110.947283,15z/data=!4m5!3m4!1s0x0:0x30f9668cb910d410!8m2!3d32.2379439!4d-110.9472625}{Keating Building}, BIO5, University of Arizona, Tucson, AZ\\
+ (520) 647-6973 \space\space \href{mailto:qikeli@gmail.com}{qikeli@gmail.com} \space\space {\href{https://qikeli.github.io/}{https://qikeli.github.io}}}
 
 % \NewPart{}{}
 
@@ -160,10 +156,11 @@ urlcolor=blue]{hyperref}
   Minor in Biostatistics\\
   Advisors: Yves A. Lussier (Bioinformatics) \& Hao Helen Zhang (Statistics)\\
   Expected graduation date: August 2017}
-\sepspace
+\vspace{3.5mm}
 
 \EducationEntry{MS Molecular Biology}{2006-2009}{Guizhou University, Guiyang, China}
-\sepspace
+
+\vspace{3.5mm}
 
 \EducationEntry{BS Biotechnology}{2001-2005}{Zhengzhou University, Zhengzhou, China}
 
@@ -173,17 +170,17 @@ urlcolor=blue]{hyperref}
 \NewPart{Research Areas}{}
 \ResearchEntry{Statistical}{Single-subject inference, large-scale inference, count data, multivariate statistics, computing, statistical machine learning, high dimensional data, Bayesian statistics, small-sample, paired-sample statistics, big data, data visualization, high-throughput data}
 
-\sepspace
+\vspace{3.5mm}
 \ResearchEntry{Interdisciplinary}{Biomedical informatics, bioinformatics, precision medicine, clinical translation, N-of-1, gene expression, gene set analysis, single-cell RNA-seq, cancer, systems biology, big clinical data}
 
 % * Work experience
 %%% ------------------------------------------------------------
 \NewPart{Appointment}{}
-\WorkEntry{Research Assistant}{2014-current}{\href{http://www.lussiergroup.org/}{Lussier Group, Center for Biomedical Informatics \& Biostatistics}, University of Arizona}{Developing statistical informatics methodology for precision medicine. Engaging in interdisciplinary research: working with an expert team of statisticians, physicians, engineers, biologists, geneticists, and computer scientists. Responsibilities include original research, statistical support, grant writing, and software engineering.}
-\newpage
-\WorkEntry{Research Assistant}{2013-2014}{Fionna McCarthy Group, University of Arizona}{Developed statistical informatics methods for the analysis of high throughput sequencing data.}
+\WorkEntry{Research Assistant}{2014-present}{\href{http://www.lussiergroup.org/}{Lussier Group, Center for Biomedical Informatics \& Biostatistics}, University of Arizona}{Developing statistical informatics methodology for precision medicine. Engaging in interdisciplinary research: working with an expert team of statisticians, physicians, engineers, biologists, geneticists, and computer scientists. Responsibilities include original research, statistical support, grant writing, and software engineering.}
 
-\WorkEntry{Research Technician}{2010-2012}{Rick Michod Group,  University of Arizona}{Studied the evolution of multicellularity using bioinformatics, comparative genomics, phylogenetic analysis and molecular biology.}
+\WorkEntry{Research Assistant}{2013-2014}{McCarthy Group, University of Arizona}{Developed statistical informatics methods for the analysis of high throughput sequencing data.}
+
+\WorkEntry{Research Technician}{2010-2012}{Michod Group,  University of Arizona}{Studied the evolution of multicellularity using bioinformatics, comparative genomics, phylogenetic analysis and molecular biology.}
 
 % * Papers
 %%% ------------------------------------------------------------
