@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Qike Li</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2017-07-27T12:36:32-07:00</updated>
- <id>http://localhost:4000</id>
+ <link href="http://hyde.getpoole.com/atom.xml" rel="self"/>
+ <link href="http://hyde.getpoole.com/"/>
+ <updated>2017-07-28T11:19:31-07:00</updated>
+ <id>http://hyde.getpoole.com</id>
  <author>
    <name>Qike</name>
    <email></email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>My First Post</title>
-   <link href="http://localhost:4000/2017/06/12/my-first-post/"/>
+   <link href="http://hyde.getpoole.com/2017/06/12/my-first-post/"/>
    <updated>2017-06-12T00:00:00-07:00</updated>
-   <id>http://localhost:4000/2017/06/12/my-first-post</id>
+   <id>http://hyde.getpoole.com/2017/06/12/my-first-post</id>
    <content type="html">&lt;div class=&quot;HTML&quot;&gt;
 &lt;p&gt;
 &amp;#x2014;
